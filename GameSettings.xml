@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<GameSettings>
+	<NumberAttempts>6</NumberAttempts> />
+	<LowerLimitRange>5</LowerLimitRange> />
+	<UpperLimitRange>20</UpperLimitRange> />
+</GameSettings>
