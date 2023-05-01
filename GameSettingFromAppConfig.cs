@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace OtusEducationHomework4
 {
-    internal class GameSettingFromAppConfig : IGameSettingOperations
+    internal class GameSettingFromAppConfig : IGameSettingLoad
     {
         public IGameSetting LoadSettings()
         {

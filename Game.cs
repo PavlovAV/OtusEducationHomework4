@@ -10,19 +10,21 @@ namespace OtusEducationHomework4
     internal class Game : IGame
     {
         private readonly IGameSetting _gameSetting;
-        public Game(IGameSetting gameSetting)
+        private readonly IMyRandom _random;
+        public Game(IGameSetting gameSetting, IMyRandom random)
         {
             _gameSetting = gameSetting;
+            _random = random;
         }
 
         int pickedNumber;
-        Random rnd = new Random();
+        //Random rnd = new Random();
 
 
         public void Run()
         {
             bool exitGame = false;
-            pickedNumber = rnd.Next(_gameSetting.LowerLimitRange, _gameSetting.UpperLimitRange);
+            pickedNumber = _random.GetNext(_gameSetting.LowerLimitRange, _gameSetting.UpperLimitRange);
             Console.WriteLine($"У вас {_gameSetting.NumberAttempts} попыток угадать число.");
             Console.WriteLine($"Введите число от {_gameSetting.LowerLimitRange} до {_gameSetting.UpperLimitRange}");
             var numberAttempt = 1;

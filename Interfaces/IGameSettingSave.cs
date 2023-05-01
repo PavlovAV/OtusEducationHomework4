@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace OtusEducationHomework4.Interfaces
 {
-    internal interface IGameSettingOperations
+    internal interface IGameSettingSave : IGameSettingOperations
     {
+        public void SaveSettings(IGameSetting gameSetting);
     }
 }

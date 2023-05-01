@@ -16,7 +16,7 @@ namespace OtusEducationHomework4
 
         public GameSettings(IGameSettingOperations gameSettingOperations)
         {
-            _gameSetting = gameSettingOperations.LoadSettings();
+            _gameSetting = ((IGameSettingLoad)gameSettingOperations).LoadSettings();
         }
     }
 }

@@ -8,11 +8,9 @@ using System.Xml.Linq;
 
 namespace OtusEducationHomework4
 {
-    internal class GameSettingFromFile : IGameSettingOperations
+    internal class GameSettingFromFile : IGameSettingLoad
     {
-        string _fileName = "GameSettings.xml";
-        public GameSettingFromFile()
-        { }
+        protected string _fileName = String.Empty;
         public GameSettingFromFile(string fileName)
         { 
             _fileName = fileName;
@@ -25,5 +23,6 @@ namespace OtusEducationHomework4
             var upperLimitRange = Convert.ToByte(xdoc.Descendants("UpperLimitRange").First().Value);
             return new GameSetting() { NumberAttempts = numberAttempts, LowerLimitRange = lowerLimitRange, UpperLimitRange = upperLimitRange };
         }
+
     }
 }
